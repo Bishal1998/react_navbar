@@ -1,0 +1,153 @@
+.navbar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo img {
+    padding: 15px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar__list {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__list li {
+    display: flex;
+    padding: 0 1rem;
+}
+
+.navbar__list li:hover {
+    opacity: 70%;
+}
+
+.navbar__list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar__last {
+    display: flex;
+    margin: 0 2rem;
+}
+
+.navbar__last_login {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navbar__last_divider {
+    height: 15px;
+    width: 2px;
+    background-color: aliceblue;
+    margin: 0 1rem;
+}
+
+.navbar__last_book {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navbar__smallscreen {
+    display: none;
+}
+
+@media all and (max-width : 1279px) {
+    .navbar__list {
+        display: none;
+    }
+
+    .navbar__last {
+        display: none;
+    }
+
+    .navbar__logo img {
+        height: 60px;
+    }
+
+    .navbar__smallscreen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* cursor: pointer; */
+        padding: 0 1rem;
+    }
+}
+
+@media all and (max-width : 767px) {
+    .navbar__list {
+        display: none;
+    }
+
+    .navbar__last {
+        display: none;
+    }
+
+    .navbar__logo img {
+        height: 40px;
+    }
+
+    .navbar__smallscreen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+}
+
+.navbar__smallscreen__overlay {
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+}
+
+.navbar__smallscreen__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.navbar__smallscreen__list li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.navbar__smallscreen__list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar__smallscreen__overlay_close {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 10px;
+}
+
+.navbar__smallscreen__last {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar__smallscreen__last div {
+    padding: 0.5rem 0;
+}
